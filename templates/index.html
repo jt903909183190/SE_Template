@@ -1,0 +1,18 @@
+{%extends "layout.html"%}
+{%block content%}
+    <div class="container">
+        <table>
+            <tbody>
+                {%for thing in cataloguedata%}
+                    <tr>
+                        <td class="image", tabindex="0", button=""><img src="{{url_for('static', filename=thing[1])}}" alt="{{ thing[1] }}" style="width: 250px; height: 250px"></td>
+                            <div class="info">
+                                <td class="name">{{ thing[0] }}</td>
+                                <td class="description">{{ thing[2] }}</td>
+                            </div>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+{%endblock%}
